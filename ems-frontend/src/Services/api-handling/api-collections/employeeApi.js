@@ -9,6 +9,9 @@ class EmployeeService {
   getAllEmployeesList = () => {
     return axios.get(`${baseUrl}/${apiEmp}`);
   };
+  createEmployee = ({ data } = {}) => {
+    return axios.post(`${baseUrl}/${apiEmp}`, data);
+  };
 }
 
 const EmployeeServices = new EmployeeService();
